@@ -2,6 +2,7 @@
    WILLY'S ADMIN
    APP PRINCIPAL
 ========================================== */
+import { cargarPagina } from "./router.js";
 import {db, ref, get} from "./firebase.js";
 
 const estadoFirebase = document.getElementById("firebase");
@@ -21,3 +22,4 @@ get(ref(db, "/"))
     estadoFirebase.style.color = "#FF5252";
     console.error(error);
 });
+cargarPagina("dashboard");
