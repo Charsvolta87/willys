@@ -1,26 +1,17 @@
-export async function cargarPagina(nombre) {
-    const contenedor =
-        document.getElementById("contenido");
-    try {
-        const respuesta =
-            await fetch(`paginas/${nombre}.html`);
+import { iniciarProductos } from "./productos.js";
 
-        const html =
-            await respuesta.text();
+export async function cargarPagina(nombre){
 
-        contenedor.innerHTML = html;
-    }
+const contenido=document.getElementById("contenido");
 
-    catch (error) {
-        contenedor.innerHTML =
-        `
-           <div class="tarjeta">
-                <h2>Error</h2>
-                <p>No se pudo cargar la página.</p>
-            </div>
-        `;
+const pagina=await fetch(`paginas/${nombre}.html`);
 
-        console.error(error);
-    }
+contenido.innerHTML=await pagina.text();
+
+if(nombre==="productos"){
+
+iniciarProductos();
+
+}
 
 }
