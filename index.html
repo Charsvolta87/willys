@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,24 +18,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
-
     <div class="contenedor">
 
         <!-- MENÚ -->
 
         <aside class="sidebar">
-
             <div class="logo">
-
                 <h2>🌭 Willy's</h2>
                 <span>ADMIN</span>
-
             </div>
-
             <nav>
 
                 <button class="menu activo">
@@ -89,17 +81,13 @@
                     <i class="fa-solid fa-gear"></i>
                     Configuración
                 </button>
-
             </nav>
-
         </aside>
 
         <!-- CONTENIDO -->
 
         <main>
-
             <header>
-
                 <h1>Dashboard</h1>
 
                 <div class="usuario">
@@ -109,39 +97,24 @@
                     Administrador
 
                 </div>
-
             </header>
 
             <section class="contenido">
-
-                <div class="tarjeta">
-
-                    <h2>Bienvenido a Willy's Admin</h2>
-
-                    <p>
-
-                        Esta será la pantalla principal del sistema.
-
-                    </p>
-
-                </div>
-
-                <div class="tarjeta">
-
-                    <h2>Estado del sistema</h2>
-
-                    <p id="firebase">
-
-                        🔴 Firebase desconectado
-
-                    </p>
-
-                </div>
-
-            </section>
-
+            <div class="tarjeta">
+                <h2>Bienvenido a Willy's Admin</h2>
+                <p>
+                    Esta será la pantalla principal del sistema.
+                </p>
+            </div>
+        
+            <div class="tarjeta">
+                <h2>Estado del sistema</h2>
+                <p id="firebase">
+                    🔴 Firebase desconectado
+                </p>
+            </div>
+        </section>
         </main>
-
     </div>
 
     <script type="module" src="js/firebase.js"></script>
