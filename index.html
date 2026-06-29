@@ -1,30 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DataFilms</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="imagenes/Picsart_26-01-18_16-38-45-210.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Willy's Admin</title>
+
+    <link rel="icon" href="imagenes/logo.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
 </head>
+
 <body>
 
-  <header class="header">
-  <a href="#/" class="brand">
-    <img src="imagenes/Picsart_26-01-18_16-38-34-664.jpg" alt="DataFilms" class="logo">
-    <span class="brand-name">DataFilms</span>
-  </a>
-  <nav>
-    
-    <a href="#/movies">Películas</a>
-    <a href="#/series">Series</a>
-    <a href="#/actors">Actores</a>
-  </nav>
-</header>
+    <div class="contenedor">
 
+        <!-- MENÚ -->
 
-  <main id="app"></main>
+        <aside class="sidebar">
 
-  <script type="module" src="js/app.js"></script>
+            <div class="logo">
+
+                <h2>🌭 Willy's</h2>
+                <span>ADMIN</span>
+
+            </div>
+
+            <nav>
+
+                <button class="menu activo">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-hotdog"></i>
+                    Productos
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Stock
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Compras
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-cash-register"></i>
+                    Ventas
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-wallet"></i>
+                    Caja
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Estadísticas
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-users"></i>
+                    Clientes
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Empleados
+                </button>
+
+                <button class="menu">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </button>
+
+            </nav>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+
+        <main>
+
+            <header>
+
+                <h1>Dashboard</h1>
+
+                <div class="usuario">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Administrador
+
+                </div>
+
+            </header>
+
+            <section class="contenido">
+
+                <div class="tarjeta">
+
+                    <h2>Bienvenido a Willy's Admin</h2>
+
+                    <p>
+
+                        Esta será la pantalla principal del sistema.
+
+                    </p>
+
+                </div>
+
+                <div class="tarjeta">
+
+                    <h2>Estado del sistema</h2>
+
+                    <p id="firebase">
+
+                        🔴 Firebase desconectado
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/app.js"></script>
+
 </body>
+
 </html>
