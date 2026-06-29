@@ -106,61 +106,36 @@ onclick="eliminarItem(${index})">
 ❌
 
 </button>
-
 </div>
-
 </div>
-
 `;
-
     });
-
     $("totalVenta").textContent="$"+total;
-
 }
 
 window.eliminarItem=function(indice){
-
     carrito.splice(indice,1);
-
     renderTicket();
-
 }
 
 function filtrarProductos(){
-
     const texto = $("buscarVenta").value.toLowerCase();
-
     const resultado = productos.filter((p)=>
-
         p.nombre.toLowerCase().includes(texto) ||
-
         p.codigo.toLowerCase().includes(texto)
-
     );
-
     renderProductos(resultado);
-
 }
 
 function vaciarVenta(){
-
     carrito=[];
-
     renderTicket();
-
 }
 
 function finalizarVenta(){
-
     if(carrito.length===0){
-
         alert("No hay productos.");
-
         return;
-
     }
-
     alert("En el próximo paso la venta se guardará en Firebase.");
-
 }
