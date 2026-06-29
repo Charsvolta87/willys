@@ -1,34 +1,23 @@
-import { renderHome } from "./views/home.view.js";
-import { renderMovies } from "./views/movies.view.js";
-import { renderSeries } from "./views/series.view.js";
-import { renderActors } from "./views/actors.view.js";
+/* ==========================================
+   WILLY'S ADMIN
+   APP PRINCIPAL
+========================================== */
+import {db, ref, get} from "./firebase.js";
 
-const app = document.getElementById("app");
+const estadoFirebase = document.getElementById("firebase");
 
-function router() {
-  const route = location.hash || "#/";
+// Intentamos leer la raíz de la base
 
-  app.innerHTML = "";
+get(ref(db, "/"))
+.then(() => {
+    estadoFirebase.innerHTML =
+        "🟢 Firebase conectado correctamente";
+    estadoFirebase.style.color = "#00C853";
+})
 
-  switch (route) {
-    case "#/movies":
-      renderMovies(app);
-      break;
-
-    case "#/series":
-      renderSeries(app);
-      break;
-
-    case "#/actors":
-      renderActors(app);
-      break;
-
-    case "#/":
-    default:
-      renderHome(app);
-      break;
-  }
-}
-
-window.addEventListener("hashchange", router);
-window.addEventListener("load", router);
+.catch((error) => {
+    estadoFirebase.innerHTML =
+        "🔴 Error al conectar con Firebase";
+    estadoFirebase.style.color = "#FF5252";
+    console.error(error);
+});
