@@ -1,29 +1,193 @@
 <div class="tarjeta">
-    <div class="productos-header">
-        <h2>
-            Productos
-        </h2>
-        <button id="btnNuevoProducto">
-            + Nuevo Producto
+
+    <div class="productos-toolbar">
+
+        <div class="productos-titulo">
+            <h2>Productos</h2>
+            <span id="cantidadProductos">0 productos</span>
+        </div>
+
+        <button id="btnNuevoProducto" class="btn btn-principal">
+            <i class="fa-solid fa-plus"></i>
+            Nuevo Producto
         </button>
+
     </div>
 
-    <input
-        type="text"
-        id="buscarProducto"
-        placeholder="Buscar producto...">
+    <div class="productos-filtros">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
+        <input
+            type="text"
+            id="buscarProducto"
+            placeholder="Buscar producto...">
 
-        <tbody id="tablaProductos">
-        </tbody>
-    </table>
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla">
+
+            <thead>
+
+                <tr>
+
+                    <th>Código</th>
+
+                    <th>Nombre</th>
+
+                    <th>Categoría</th>
+
+                    <th>Precio</th>
+
+                    <th>Costo</th>
+
+                    <th>Stock</th>
+
+                    <th>Estado</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaProductos">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modalProducto">
+
+    <div class="modal-contenido">
+
+        <div class="modal-header">
+
+            <h2 id="tituloModal">
+                Nuevo Producto
+            </h2>
+
+            <button id="cerrarModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <div class="grupo">
+
+                <label>Código</label>
+
+                <input
+                    type="text"
+                    id="codigoProducto">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Nombre</label>
+
+                <input
+                    type="text"
+                    id="nombreProducto">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Categoría</label>
+
+                <select id="categoriaProducto">
+
+                    <option>Panchos</option>
+
+                    <option>Hamburguesas</option>
+
+                    <option>Sandwiches</option>
+
+                    <option>Papas</option>
+
+                    <option>Bebidas</option>
+
+                    <option>Postres</option>
+
+                    <option>Otros</option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Precio</label>
+
+                <input
+                    type="number"
+                    id="precioProducto">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Costo</label>
+
+                <input
+                    type="number"
+                    id="costoProducto">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Stock Inicial</label>
+
+                <input
+                    type="number"
+                    id="stockProducto">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Stock Mínimo</label>
+
+                <input
+                    type="number"
+                    id="stockMinimoProducto">
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                class="btn"
+                id="cancelarProducto">
+
+                Cancelar
+
+            </button>
+
+            <button
+                class="btn btn-principal"
+                id="guardarProducto">
+
+                Guardar
+
+            </button>
+
+        </div>
+
+    </div>
+
 </div>
