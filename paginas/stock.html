@@ -1,1 +1,169 @@
+<div class="tarjeta">
 
+    <div class="productos-toolbar">
+
+        <div class="productos-titulo">
+
+            <h2>Stock</h2>
+
+            <span id="cantidadStock">0 productos</span>
+
+        </div>
+
+    </div>
+
+    <div class="productos-filtros">
+
+        <input
+            type="text"
+            id="buscarStock"
+            placeholder="Buscar producto...">
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla">
+
+            <thead>
+
+                <tr>
+
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Stock</th>
+                    <th>Mínimo</th>
+                    <th>Estado</th>
+                    <th>Movimiento</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaStock">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- MODAL MOVIMIENTO -->
+
+<div class="modal" id="modalStock">
+
+    <div class="modal-contenido">
+
+        <div class="modal-header">
+
+            <h2>
+
+                Movimiento de Stock
+
+            </h2>
+
+            <button id="cerrarModalStock">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <div class="grupo">
+
+                <label>Producto</label>
+
+                <input
+                    type="text"
+                    id="stockProductoNombre"
+                    readonly>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Tipo</label>
+
+                <select id="tipoMovimiento">
+
+                    <option value="entrada">Entrada</option>
+
+                    <option value="salida">Salida</option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Cantidad</label>
+
+                <input
+                    type="number"
+                    id="cantidadMovimiento"
+                    min="1">
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Motivo</label>
+
+                <select id="motivoMovimiento">
+
+                    <option>Compra</option>
+
+                    <option>Venta</option>
+
+                    <option>Rotura</option>
+
+                    <option>Ajuste</option>
+
+                    <option>Consumo Interno</option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo" style="grid-column:1 / span 2;">
+
+                <label>Observaciones</label>
+
+                <input
+                    type="text"
+                    id="observacionMovimiento">
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                class="btn"
+                id="cancelarMovimiento">
+
+                Cancelar
+
+            </button>
+
+            <button
+                class="btn btn-principal"
+                id="guardarMovimiento">
+
+                Guardar Movimiento
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
