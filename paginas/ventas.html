@@ -1,1 +1,46 @@
-
+<div class="tarjeta">
+    <div class="productos-toolbar">
+        <div class="productos-titulo">
+            <h2>Punto de Venta</h2>
+            <span id="horaActual"></span>
+        </div>
+        <button class="btn" id="btnVaciarVenta">
+            Vaciar Venta
+        </button>
+    </div>
+    <div class="ventas-grid">
+        <!-- PANEL IZQUIERDO -->
+        <div class="ventas-productos">
+            <input
+                type="text"
+                id="buscarVenta"
+                placeholder="Buscar producto por nombre o código...">
+            <div id="listaProductosVenta" class="lista-productos">
+            </div>
+        </div>
+        <!-- PANEL DERECHO -->
+        <div class="ventas-ticket">
+            <h3>Pedido</h3>
+            <div id="detalleVenta">
+            </div>
+            <div class="ventas-total">
+                <span>Total</span>
+                <h1 id="totalVenta">$0</h1>
+            </div>
+            <div class="grupo">
+                <label>Método de Pago</label>
+                <select id="formaPago">
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                    <option>Débito</option>
+                    <option>Crédito</option>
+                </select>
+            </div>
+            <button
+                class="btn btn-principal"
+                id="btnFinalizarVenta">
+                FINALIZAR VENTA
+            </button>
+        </div>
+    </div>
+</div>
