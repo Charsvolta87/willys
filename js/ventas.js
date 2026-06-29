@@ -136,10 +136,8 @@ $${subtotal}
 }
 
 window.eliminarItem = function (index) {
-
     carrito.splice(index, 1);
     renderTicket();
-
 }
 
 function filtrarProductos() {
@@ -155,10 +153,8 @@ function filtrarProductos() {
 }
 
 function vaciarVenta() {
-
     carrito = [];
     renderTicket();
-
 }
 
 async function finalizarVenta() {
@@ -187,6 +183,18 @@ async function finalizarVenta() {
     };
 
     await set(ventaRef, venta);
+
+    // 🔥 NUEVO: registrar ingreso en caja
+    const cajaRef = push(ref(db, "caja"));
+
+    await set(cajaRef, {
+
+        tipo: "ingreso",
+        origen: "venta",
+        monto: total,
+        fecha: new Date().toISOString()
+
+    });
 
     for (const item of carrito) {
 
