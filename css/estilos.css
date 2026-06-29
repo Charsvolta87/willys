@@ -176,3 +176,56 @@ header h1{
 }
 
 }
+
+/*=============================
+PRODUCTOS
+=============================*/
+.productos-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+#btnNuevoProducto{
+background:var(--color-principal);
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+}
+
+#btnNuevoProducto:hover{
+opacity:.9;
+}
+
+#buscarProducto{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+border-radius:8px;
+border:1px solid var(--borde);
+background:#444;
+color:white;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:var(--color-principal);
+padding:15px;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid #444;
+}
+
+tr:hover{
+background:#3b3b3b;
+}
