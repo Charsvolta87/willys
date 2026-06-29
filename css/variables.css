@@ -1,0 +1,31 @@
+/* ==========================================
+   WILLY'S ADMIN
+   VARIABLES GLOBALES
+========================================== */
+
+:root{
+
+    --color-principal:#D62828;
+    --color-secundario:#F4B400;
+
+    --fondo:#1B1B1B;
+    --sidebar:#252525;
+    --header:#2E2E2E;
+    --panel:#333333;
+
+    --texto:#FFFFFF;
+    --texto-secundario:#BBBBBB;
+
+    --borde:#444444;
+
+    --verde:#00C853;
+    --rojo:#FF5252;
+    --amarillo:#FFD600;
+
+    --radio:12px;
+
+    --sombra:0px 6px 20px rgba(0,0,0,.35);
+
+    --transicion:.25s;
+
+}
