@@ -2,6 +2,7 @@ import { iniciarProductos } from "./productos.js";
 import { iniciarStock } from "./stock.js";
 import { iniciarMovimientos } from "./movimientos.js";
 import { iniciarVentas } from "./ventas.js";
+import { iniciarCaja } from "./caja.js";
 
 export async function cargarPagina(nombre) {
 
@@ -40,7 +41,8 @@ export async function cargarPagina(nombre) {
                 iniciarVentas();
                 break;
 
-            case "compras":
+            case "caja":
+                iniciarCaja();
                 break;
 
             case "clientes":
