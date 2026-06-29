@@ -1,1 +1,29 @@
-
+<div class="tarjeta">
+    <div class="productos-toolbar">
+        <div class="productos-titulo">
+            <h2>Caja</h2>
+            <span id="resumenCaja">Resumen diario</span>
+        </div>
+    </div>
+    <div class="caja-grid">
+        <div class="caja-panel">
+            <h3>Apertura de Caja</h3>
+            <input type="number" id="montoApertura" placeholder="Monto inicial">
+            <button class="btn btn-principal" id="btnAbrirCaja">
+                Abrir Caja
+            </button>
+        </div>
+        <div class="caja-panel">
+            <h3>Estado</h3>
+            <p>Ventas del día: <span id="ventasDia">$0</span></p>
+            <p>Entradas: <span id="ingresosExtra">$0</span></p>
+            <p>Salidas: <span id="egresosExtra">$0</span></p>
+            <hr>
+            <h2>Total esperado: <span id="totalCaja">$0</span></h2>
+        </div>
+    </div>
+    <div class="caja-panel">
+        <h3>Movimientos de Caja</h3>
+        <div id="listaCaja"></div>
+    </div>
+</div>
