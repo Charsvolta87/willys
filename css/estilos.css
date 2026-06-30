@@ -686,3 +686,36 @@ MODAL
     flex-direction:column;
 }
 }
+
+
+/*====================================
+ESTADISTICAS
+====================================*/
+
+#rankingProductos,
+#metodosPago,
+#productosSinStock{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.item-estadistica{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    background:#3A3A3A;
+    border-radius:10px;
+}
+
+.item-estadistica strong{
+    color:white;
+}
+
+.barra-ranking{
+    height:10px;
+    background:var(--color-principal);
+    border-radius:10px;
+    margin-top:8px;
+}
