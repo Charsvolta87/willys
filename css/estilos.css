@@ -611,36 +611,7 @@ nav{
     gap:0;
 }
 
-/*==========================
-BOTONES MENU
-==========================*/
 
-.menu{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:4px;
-    height:70px;
-    border-radius:0;
-    background:none;
-    font-size:11px;
-    color:#DDD;
-}
-
-.menu i{
-    font-size:22px;
-    width:auto;
-}
-
-.menu:hover{
-    background:none;
-}
-
-.menu.activo{
-    background:var(--color-principal);
-}
 
 /*==========================
 HEADER
