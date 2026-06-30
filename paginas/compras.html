@@ -1,1 +1,76 @@
+<div class="tarjeta">
 
+    <div class="productos-toolbar">
+
+        <div class="productos-titulo">
+            <h2>Compras</h2>
+            <span>Nueva compra</span>
+        </div>
+
+        <button class="btn" id="btnVaciarCompra">
+            Vaciar Compra
+        </button>
+
+    </div>
+
+    <div class="ventas-grid">
+
+        <!-- PRODUCTOS -->
+
+        <div class="ventas-productos">
+
+            <input
+                type="text"
+                id="buscarCompra"
+                placeholder="Buscar producto...">
+
+            <div
+                id="listaProductosCompra"
+                class="lista-productos">
+
+            </div>
+
+        </div>
+
+        <!-- COMPRA -->
+
+        <div class="ventas-ticket">
+
+            <div class="grupo">
+
+                <label>Proveedor</label>
+
+                <input
+                    type="text"
+                    id="proveedorCompra"
+                    placeholder="Nombre del proveedor">
+
+            </div>
+
+            <h3>Detalle</h3>
+
+            <div id="detalleCompra">
+
+            </div>
+
+            <div class="ventas-total">
+
+                <span>Total Compra</span>
+
+                <h1 id="totalCompra">$0</h1>
+
+            </div>
+
+            <button
+                class="btn btn-principal"
+                id="btnFinalizarCompra">
+
+                REGISTRAR COMPRA
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
