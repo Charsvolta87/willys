@@ -4,6 +4,7 @@ import { iniciarMovimientos } from "./movimientos.js";
 import { iniciarVentas } from "./ventas.js";
 import { iniciarCompras } from "./compras.js";
 import { iniciarCaja } from "./caja.js";
+import { iniciarDashboard } from "./dashboard.js";
 
 export async function cargarPagina(nombre) {
 
@@ -24,6 +25,7 @@ export async function cargarPagina(nombre) {
         switch (nombre) {
 
             case "dashboard":
+                iniciarDashboard();
                 break;
 
             case "productos":
