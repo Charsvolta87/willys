@@ -515,3 +515,174 @@ grid-template-columns:1fr;
 }
 
 }
+
+.card-dashboard small{
+    display:block;
+    margin-top:10px;
+    color:#CCC;
+    font-size:14px;
+
+}
+
+
+/*==================================================
+            WILLY'S MOBILE UI V2
+==================================================*/
+
+@media (max-width: 768px){
+html{
+    font-size:15px;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/*==========================
+CONTENEDOR
+==========================*/
+
+.contenedor{
+    display:block;
+    min-height:100vh;
+    padding-bottom:80px;
+}
+
+/*==========================
+SIDEBAR
+==========================*/
+
+.sidebar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:70px;
+    padding:0;
+    background:#202020;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    z-index:9999;
+    border-top:1px solid #444;
+}
+
+.logo{
+    display:none;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    gap:0;
+}
+
+/*==========================
+BOTONES MENU
+==========================*/
+
+.menu{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    height:70px;
+    border-radius:0;
+    background:none;
+    font-size:11px;
+    color:#DDD;
+}
+
+.menu i{
+    font-size:22px;
+    width:auto;
+}
+
+.menu:hover{
+    background:none;
+}
+
+.menu.activo{
+    background:var(--color-principal);
+}
+
+/*==========================
+HEADER
+==========================*/
+
+header{
+    height:60px;
+    padding:0 15px;
+}
+
+header h1{
+    font-size:22px;
+}
+
+header span{
+    font-size:12px;
+}
+
+/*==========================
+CONTENIDO
+==========================*/
+
+.contenido{
+    padding:15px;
+}
+
+/*==========================
+TARJETAS
+==========================*/
+
+.tarjeta{
+    padding:15px;
+    border-radius:15px;
+}
+
+/*==========================
+BOTONES
+==========================*/
+
+.btn{
+    width:100%;
+    padding:15px;
+    font-size:16px;
+}
+
+/*==========================
+INPUTS
+==========================*/
+input,
+select,
+textarea{
+    min-height:48px;
+    font-size:16px;
+}
+
+/*==========================
+MODAL
+==========================*/
+.modal-contenido{
+    width:100%;
+    height:100%;
+    max-width:none;
+    border-radius:0;
+}
+
+.modal-body{
+    display:flex;
+    flex-direction:column;
+}
+
+.modal-footer{
+    display:flex;
+    flex-direction:column;
+}
+}
