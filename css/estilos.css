@@ -719,3 +719,25 @@ ESTADISTICAS
     border-radius:10px;
     margin-top:8px;
 }
+
+
+/*====================================
+BOTONES
+====================================*/
+.btn{
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.25s;
+}
+
+.btn-principal{
+    background:var(--color-principal);
+    color:white;
+}
+
+.btn-principal:hover{
+    background:var(--color-principal-hover);
+}
