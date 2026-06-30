@@ -2,6 +2,7 @@ import { iniciarProductos } from "./productos.js";
 import { iniciarStock } from "./stock.js";
 import { iniciarMovimientos } from "./movimientos.js";
 import { iniciarVentas } from "./ventas.js";
+import { iniciarCompras } from "./compras.js";
 import { iniciarCaja } from "./caja.js";
 
 export async function cargarPagina(nombre) {
@@ -41,6 +42,10 @@ export async function cargarPagina(nombre) {
                 iniciarVentas();
                 break;
 
+            case "compras":
+                iniciarCompras();
+                break;
+
             case "caja":
                 iniciarCaja();
                 break;
@@ -59,22 +64,15 @@ export async function cargarPagina(nombre) {
 
         }
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.error(error);
 
         contenido.innerHTML = `
-
-        <div class="tarjeta">
-
-            <h2>Error</h2>
-
-            <p>No se pudo cargar la página.</p>
-
-        </div>
-
+            <div class="tarjeta">
+                <h2>Error</h2>
+                <p>No se pudo cargar la página.</p>
+            </div>
         `;
 
     }
