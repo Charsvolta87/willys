@@ -75,25 +75,55 @@ nav{
     gap:10px;
 }
 
-menu{
+
+.menu{
+    width:100%;
+    min-height:52px;
     border:none;
-    background:none;
-    color:white;
-    text-align:left;
-    padding:14px;
-    border-radius:10px;
+    border-radius:14px;
+    background:transparent;
+    color:#DDD;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 18px;
     cursor:pointer;
-    transition:.25s;
+    font-size:15px;
+    font-weight:500;
+    transition:all .25s ease;
 }
 
 .menu i{
     width:24px;
+    text-align:center;
+    font-size:18px;
+    color:#BDBDBD;
+    transition:.25s;
 }
 
-.menu:hover,
-.menu.activo{
-    background:var(--color-principal);
+.menu:hover{
+    background:#393939;
+    transform:translateX(4px);
 }
+
+.menu:hover i{
+    color:var(--color-secundario);
+}
+
+.menu.activo{
+    background:linear-gradient(
+        90deg,
+        var(--color-principal),
+        #ff4343
+    );
+    color:white;
+    box-shadow:0 8px 18px rgba(214,40,40,.35);
+}
+
+.menu.activo i{
+    color:white;
+}
+
 
 /*====================================
 MAIN
