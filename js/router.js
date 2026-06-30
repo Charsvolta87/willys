@@ -5,6 +5,7 @@ import { iniciarVentas } from "./ventas.js";
 import { iniciarCompras } from "./compras.js";
 import { iniciarCaja } from "./caja.js";
 import { iniciarDashboard } from "./dashboard.js";
+import { iniciarEstadisticas } from "./estadisticas.js";
 
 export async function cargarPagina(nombre) {
 
@@ -59,6 +60,7 @@ export async function cargarPagina(nombre) {
                 break;
 
             case "estadisticas":
+                iniciarEstadisticas();
                 break;
 
             case "configuracion":
